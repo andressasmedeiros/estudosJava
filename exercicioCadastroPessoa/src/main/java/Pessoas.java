@@ -240,7 +240,7 @@ public class Pessoas {
     }
 
     public void relatorioPessoas() {
-        String nomeArquivo = "relatórioPessoas.txt";
+        String nomeArquivo = "relatorioPessoas.txt";
         Path caminho = Paths.get(nomeArquivo);
         String conteudo = "";
         DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
