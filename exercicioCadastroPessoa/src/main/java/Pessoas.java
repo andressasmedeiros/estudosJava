@@ -45,11 +45,10 @@ public class Pessoas {
                 continue;
             }
 
-            if (cpf.length() != 11) {
-                System.out.println("O CPF deve ter exatamente 11 dígitos!");
+            if (!validadorCPF.isValid(cpf)) {
+                System.out.println("CPF inválido! Digite um CPF válido.");
                 continue;
             }
-
             break;
         }
         while (nascimento == null) {
@@ -93,7 +92,7 @@ public class Pessoas {
         if (listaDePessoas.isEmpty()) {
             System.out.println("Nenhuma pessoa encontrada.");
         } else {
-            imprimirPessoasConsole(listaDePessoas,"=== Resultados da Busca ===" );
+            imprimirPessoasConsole(listaDePessoas, "=== Resultados da Busca ===");
         }
     }
 
@@ -167,7 +166,7 @@ public class Pessoas {
         if (resultados.isEmpty()) {
             System.out.println("Nenhuma pessoa encontrada.");
         } else {
-            imprimirPessoasConsole(resultados,"=== Resultados da Busca ===" );
+            imprimirPessoasConsole(resultados, "=== Resultados da Busca ===");
         }
     }
 
@@ -191,6 +190,7 @@ public class Pessoas {
                 for (Pessoa p : listaDePessoas) {
                     if (p.getCpf().equals(termoBusca)) {
                         encontrou = true;
+                        System.out.println(p);
                         confirmarExclusao = lerNumero("Deseja mesmo excluir?\n1 - SIM\n2 - NÃO");
                         if (confirmarExclusao == 1) {
                             resultados.add(p);
@@ -213,6 +213,7 @@ public class Pessoas {
                 for (Pessoa p : listaDePessoas) {
                     if (p.getIdExibicao() == Integer.parseInt(termoBusca)) {
                         encontrou = true;
+                        System.out.println(p);
                         confirmarExclusao = lerNumero("Deseja mesmo excluir?\n1 - SIM\n2 - NÃO");
                         if (confirmarExclusao == 1) {
                             resultados.add(p);
@@ -234,7 +235,7 @@ public class Pessoas {
 
         if (!encontrou) {
             System.out.println("Nenhuma pessoa encontrada.");
-        } else if (excluiu){
+        } else if (excluiu) {
             System.out.println("Pessoa excluída com sucesso!!");
         }
     }
