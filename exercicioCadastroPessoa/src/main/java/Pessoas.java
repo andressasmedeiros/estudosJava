@@ -1,3 +1,5 @@
+package main.java;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -23,15 +25,15 @@ public class Pessoas {
 
         while (name == null || name.isEmpty()) {
             System.out.println("Informe o nome:");
-            name = scanner.next();
+            name = scanner.nextLine();
         }
         while (cpf == null || cpf.isEmpty()) {
             System.out.println("Informe o CPF:");
-            cpf = scanner.next();
+            cpf = scanner.nextLine();
         }
         while (nascimento == null) {
             System.out.println("Informe a data de nascimento:");
-            String dataInput = scanner.next();
+            String dataInput = scanner.nextLine();
             try {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 nascimento = LocalDate.parse(dataInput, formatter);

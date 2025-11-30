@@ -1,3 +1,5 @@
+package main.java;
+
 public class GeradorIdExibicao {
     private static int contador = 1;
 
