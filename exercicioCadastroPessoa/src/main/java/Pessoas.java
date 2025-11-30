@@ -25,11 +25,19 @@ public class Pessoas {
 
         while (name == null || name.isEmpty()) {
             System.out.println("Informe o nome:");
-            name = scanner.nextLine();
+            name = scanner.nextLine().trim();
+
+            if (name.isEmpty()) {
+                System.out.println("O nome não pode ser vazio!");
+            }
         }
         while (cpf == null || cpf.isEmpty()) {
             System.out.println("Informe o CPF:");
-            cpf = scanner.nextLine();
+            cpf = scanner.nextLine().trim();
+
+            if (cpf.isEmpty()) {
+                System.out.println("O CPF não pode ser vazio!");
+            }
         }
         while (nascimento == null) {
             System.out.println("Informe a data de nascimento:");
