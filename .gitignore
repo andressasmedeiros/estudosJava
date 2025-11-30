@@ -7,7 +7,7 @@ exercicioCadastroPessoa/target/
 ### IntelliJ IDEA ###
 .idea/
 *.iws
-/production/
+production/
 *.iml
 *.ipr
 
