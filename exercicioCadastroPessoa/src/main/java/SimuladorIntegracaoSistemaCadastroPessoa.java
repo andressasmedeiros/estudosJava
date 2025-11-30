@@ -14,9 +14,13 @@ public class SimuladorIntegracaoSistemaCadastroPessoa {
     private static final String API_URL = "https://api.invertexto.com/v1/faker?token=23256%7CZDlW9jRjinmC4Wt7m4GEMFiUrtYa7vST";
 
     public List<Pessoa> consultarPessoas(int quantidade) {
+        if (quantidade < 1 || quantidade > 1000) {
+            throw new IllegalArgumentException("Quantidade deve entre 1 e 1000 pessoas.");
+        }
+
         contagemAteAcabar++;
 
-        if (contagemAteAcabar == 5) {
+        if (contagemAteAcabar == 2) {
             return new ArrayList<>();
         }
 
