@@ -31,13 +31,26 @@ public class Pessoas {
                 System.out.println("O nome não pode ser vazio!");
             }
         }
-        while (cpf == null || cpf.isEmpty()) {
-            System.out.println("Informe o CPF:");
+        while (true) {
+            System.out.println("Informe o CPF (somente números):");
             cpf = scanner.nextLine().trim();
 
             if (cpf.isEmpty()) {
                 System.out.println("O CPF não pode ser vazio!");
+                continue;
             }
+
+            if (!cpf.matches("\\d+")) {
+                System.out.println("O CPF deve conter apenas números!");
+                continue;
+            }
+
+            if (cpf.length() != 11) {
+                System.out.println("O CPF deve ter exatamente 11 dígitos!");
+                continue;
+            }
+
+            break;
         }
         while (nascimento == null) {
             System.out.println("Informe a data de nascimento:");
