@@ -7,9 +7,9 @@ exercicioCadastroPessoa/target/
 ### IntelliJ IDEA ###
 .idea/
 *.iws
+production/
 *.iml
 *.ipr
-parte1.iml
 
 ### Eclipse ###
 .apt_generated
