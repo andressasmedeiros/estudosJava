@@ -5,10 +5,11 @@ exercicioCadastroPessoa/target/
 *.txt
 
 ### IntelliJ IDEA ###
-.idea
+*.idea
 *.iws
 *.iml
 *.ipr
+parte1.iml
 
 ### Eclipse ###
 .apt_generated
